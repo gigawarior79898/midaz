@@ -75,6 +75,30 @@
   }
 }
 
+/* Progress bar animation */
+.progress-bar {
+  animation: progress-fill 3.5s ease-out forwards;
+  width: 0%;
+}
+
+@keyframes progress-fill {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 30%;
+  }
+  50% {
+    width: 60%;
+  }
+  75% {
+    width: 85%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
 /* Text fade in */
 .fade-in-text {
   animation: fade-in 1s ease-out 1.5s forwards;
@@ -115,18 +139,18 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom gradient animations */
+/* Enhanced gradient animations */
 @keyframes gradient-x {
   0%, 100% {
-    transform: translateX(0%);
+    background-position: 0% 50%;
   }
   50% {
-    transform: translateX(-100%);
+    background-position: 100% 50%;
   }
 }
 
 .animate-gradient-x {
-  animation: gradient-x 15s ease infinite;
+  animation: gradient-x 3s ease infinite;
   background-size: 200% 200%;
 }
 
